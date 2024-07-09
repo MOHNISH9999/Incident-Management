@@ -1,0 +1,41 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="com.crave.Incident_Management.controller.Incident_Detail">
+	<App>
+		<pages>
+			<Page title="Safety Observation" titleAlignment="Center" class="boldTitle" showNavButton="true" navButtonTap="onBack">
+				<content>
+					<VBox class="sapUiSmallMargin vBox_incidentDetail">
+						<Text text="{incidentDataModel>incident_title}" class="sapUiSmallMarginBottom incident_detail_IncidentTite"/>
+						<Text text="{ path: 'incidentDataModel>date_time', formatter: '.formatter.formatDateTime' }" class="sapUiSmallMarginBottom"/>
+						<Text text="{incidentDataModel>status}" class="sapUiSmallMarginBottom"/>
+						<Label text="Processor:" class=""/>
+						<Text text="{incidentDataModel>username}" class="sapUiSmallMarginBottom"/>
+						<Label text="Phone:" class=""/>
+						<Text text="{userDetailModel>/phone}" class="sapUiSmallMarginBottom"/>
+						<Label text="Email:" class=""/>
+						<Text text="{userDetailModel>/email}" class="sapUiSmallMarginBottom"/>
+						<Label text="Incident Type:" class=""/>
+						<Text text="{incidentDataModel>incident_type}" class="sapUiSmallMarginBottom"/>
+						<Label text="Description:" class=""/>
+						<Text text="{incidentDataModel>incident_title}" class="sapUiSmallMarginBottom"/>
+						<Label text="When did it happen?:" class=""/>
+						<Text text="{ path: 'incidentDataModel>date_time', formatter: '.formatter.formatDateTime' }" class="sapUiSmallMarginBottom"/>
+						<Label text="Where did it happen?:" class=""/>
+						<Text text="{incidentDataModel>location}" class="sapUiSmallMarginBottom"/>
+						<Label text="Attachment:" class=""/>
+						<Image src="{incidentDataModel>image}" class="incident_detail_image sapUiSmallMarginBottom" press=".onImagePress"/>
+					</VBox>
+				</content>
+				<footer>
+					<Toolbar width="100%">
+						<content>
+							<Button text="Update" press="onUpdatePress" activeIcon="sap-icon://nav-back" class="update_OrangeButton"/>
+						</content>
+					</Toolbar>
+				</footer>
+				<headerContent>
+					<Button xmlns="sap.m" id="button1" icon="sap-icon://customer" class="user_Logo"/>
+				</headerContent>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

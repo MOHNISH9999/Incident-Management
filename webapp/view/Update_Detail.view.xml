@@ -1,0 +1,123 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="com.crave.Incident_Management.controller.Update_Detail">
+	<App>
+		<pages>
+			<Page title="Update Incident" titleAlignment="Center" class="boldTitle">
+				<content>
+					<VBox class="sapUiSmallMargin vBox_updateIncident">
+						<Label text="*Incident Type" labelFor="box0" design="Bold"/>
+						<ComboBox id="box0" placeholder="Select Incident Type">
+							<items>
+								<core:Item key="Security" text="Security"/>
+								<core:Item key="Software" text="Software"/>
+								<core:Item key="Hardware" text="Hardware"/>
+								<core:Item key="Telephone" text="Telephone"/>
+								<core:Item key="Database" text="Database"/>
+								<core:Item key="Inquiry" text="Inquiry"/>
+								<core:Item key="Maintenance" text="Maintenance"/>
+							</items>
+						</ComboBox>
+						<Label text="*Incident Title" design="Bold"/>
+						<Input id="incidentTitle"/>
+						<Label text="*What Happened?" design="Bold"/>
+						<Input id="incidentDescp" placeholder="Describe what happened"/>
+						<Label text="*When Did it happen?" design="Bold"/>
+						<DatePicker id="whenDate"/>
+						<Label text="*Priority" labelFor="box1" design="Bold"/>
+						<ComboBox id="box1" placeholder="Select Priority">
+							<items>
+								<core:Item key="High" text="High"/>
+								<core:Item key="Medium" text="Medium"/>
+								<core:Item key="Low" text="Low"/>
+							</items>
+						</ComboBox>
+						<Label text="*Status" labelFor="box2" design="Bold"/>
+						<ComboBox id="box2" placeholder="Select Status">
+							<items>
+								<core:Item key="Initial" text="Initial"/>
+								<core:Item key="Assigned" text="Assigned"/>
+								<core:Item key="Created" text="Created"/>
+								<core:Item key="Realease" text="Realease"/>
+								<core:Item key="Confirmed" text="Confirmed"/>
+								<core:Item key="Technical" text="Technical Completion"/>
+								<core:Item key="Closed" text="Closed"/>
+							</items>
+						</ComboBox>
+						<Label text="Location" design="Bold"/>
+						<Input id="getLocation"/>
+						<Button text="Get Location" press="onGetLocationPress"/>
+						<!-- Observed -->
+						<Label text="Was anyone observed?" width="100%" design="Bold"/>
+						<HBox width="100%">
+							<items>
+								<RadioButton id="yesObserved" groupName="GroupA" text="Yes" select="onObservedChange"/>
+								<RadioButton id="noObserved" groupName="GroupA" text="No" select="onObservedChange"/>
+							</items>
+						</HBox>
+						<!-- Injured -->
+						<Label text="Was anyone injured?" width="100%" design="Bold"/>
+						<HBox width="100%">
+							<items>
+								<RadioButton id="yesInjured" groupName="GroupB" text="Yes" select="onInjuredChange"/>
+								<RadioButton id="noInjured" groupName="GroupB" text="No" select="onInjuredChange"/>
+							</items>
+						</HBox>
+						<Input id="injuredName" visible="false" placeholder="Enter injured name"/>
+						<!-- Damaged -->
+						<Label text="Was anything damaged?" width="100%" design="Bold"/>
+						<HBox width="100%">
+							<items>
+								<RadioButton id="yesDamaged" groupName="GroupC" text="Yes" select="onDamagedChange"/>
+								<RadioButton id="noDamaged" groupName="GroupC" text="No" select="onDamagedChange"/>
+							</items>
+						</HBox>
+						<Input id="damagedName" visible="false" placeholder="Enter damaged name"/>
+						<!-- Released -->
+						<Label text="Was any material released?" width="100%" design="Bold"/>
+						<HBox width="100%">
+							<items>
+								<RadioButton id="yesReleased" groupName="GroupD" text="Yes" select="onReleasedChange"/>
+								<RadioButton id="noReleased" groupName="GroupD" text="No" select="onReleasedChange"/>
+							</items>
+						</HBox>
+						<VBox id="releasedFields" visible="false">
+							<Label text="Released Type:"/>
+							<ComboBox id="releasedType">
+								<items>
+									<core:Item key="Air" text="Air"/>
+									<core:Item key="Water" text="Water"/>
+									<core:Item key="Ground" text="Ground"/>
+								</items>
+							</ComboBox>
+							<Label text="Released Amount:"/>
+							<Input id="releasedAmount" type="Number"/>
+							<Label text="UOM:"/>
+							<ComboBox id="uom">
+								<items>
+									<core:Item key="MG" text="MG"/>
+									<core:Item key="KG" text="KG"/>
+									<core:Item key="Pound" text="Pound"/>
+								</items>
+							</ComboBox>
+						</VBox>
+						<Label text="Attachment" design="Bold"/>
+						<Image id="image0" width="140px" height="140px"/>
+					</VBox>
+				</content>
+				<footer>
+					<Toolbar>
+						<content>
+							<Button id="cameraButt" icon="sap-icon://camera" press="takePhoto"/>
+							<ToolbarSpacer/>
+							<Button text="Update" id="updateIncident" press="onUpdateIncidentPress" type="Emphasized"/>
+							<Button text="Cancel" id="cancelIncident" press="onCancelIncidentpress"/>
+						</content>
+					</Toolbar>
+				</footer>
+				<headerContent>
+					<Button id="button0" icon="sap-icon://customer" class="user_Logo"/>
+				</headerContent>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,53 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="com.crave.Incident_Management.controller.Incident_List">
+	<App>
+		<pages>
+			<Page id="incidentListPage" titleAlignment="Center" title="{incidentDataModel>/pageTitle}" class="boldTitle">
+				<content>
+					<List id="incidentList" items="{incidentDataModel>/incident}">
+						<CustomListItem type="Active" press=".onIncidentPress">
+							<HBox alignItems="Center" justifyContent="SpaceBetween" class="sapUiMediumMargin">
+								<HBox alignItems="Center" class="sapUiMediumMarginEnd">
+									<Image src="{incidentDataModel>image}" width="4rem" height="4rem" class="sapUiMediumMarginEnd" press=".onImagePress"/>
+									<VBox>
+										<Title text="{incidentDataModel>incident_title}" wrapping="true" class="onlyBold sapUiTinyMarginBottom"/>
+										<ObjectAttribute text="{incidentDataModel>incident_type}" class="sapUiTinyMarginBottom"/>
+										<ObjectAttribute text="{ path: 'incidentDataModel>date_time', formatter: '.formatter.formatDateTime' }"/>
+									</VBox>
+								</HBox>
+								<VBox alignItems="End">
+									<ObjectNumber number="{incidentDataModel>priority}" unit="" class="sapUiSmallMarginBottom"/>
+									<ObjectStatus text="{incidentDataModel>status}"/>
+								</VBox>
+							</HBox>
+						</CustomListItem>
+					</List>
+					<!--<List id="incidentList" items="{incidentDataModel>/incident}">-->
+					<!--	<ObjectListItem title="{incidentDataModel>incident_title}" class="onlyBold" number="{incidentDataModel>priority}" numberUnit="Priority" type="Active" press=".onIncidentPress" icon="{incidentDataModel>image}">-->
+					<!--		<attributes>-->
+					<!--			<ObjectAttribute text="{incidentDataModel>incident_type}"/>-->
+					<!--<ObjectAttribute text="{incidentDataModel>date_time}"/>-->
+					<!--			<ObjectAttribute text="{ path: 'incidentDataModel>date_time', formatter: '.formatter.formatDateTime' }"/>-->
+					<!--<ObjectAttribute text="{incidentDataModel>observed}"/>-->
+					<!--		</attributes>-->
+					<!--		<firstStatus>-->
+					<!--			<ObjectStatus text="{incidentDataModel>status}"/>-->
+					<!--		</firstStatus>-->
+					<!--	</ObjectListItem>-->
+					<!--</List>-->
+				</content>
+				<footer>
+					<Toolbar width="100%" id="toolbar1" class="incidentListFooter sapUiTinyMarginBottom ">
+						<content>
+							<Button xmlns="sap.m" text="Add" id="createButton" press="onCreatepress" class="createButton sapUiTinyMarginTop" icon="sap-icon://add"/>
+						</content>
+					</Toolbar>
+				</footer>
+				<headerContent>
+					<Button xmlns="sap.m" text="" id="refreshButton" icon="sap-icon://refresh" class="refreshStyle" press="onRereshPress"/>
+					<Button xmlns="sap.m" text="" id="logoutButton" icon="sap-icon://log" class="refreshStyle" press="onLogoutPressPress"/>
+				</headerContent>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

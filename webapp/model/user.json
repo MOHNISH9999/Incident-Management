@@ -1,0 +1,26 @@
+[
+    {
+        "id": "0",
+        "username": "abcd",
+        "password": "123",
+        "name": "Axel",
+        "phone": "617.607.5013 x6495",
+        "email": "Alivia_Terry50@gmail.com"
+    },
+    {
+        "id": "1",
+        "username": "demo",
+        "password": "demo",
+        "name": "Jessy",
+        "phone": "(514) 906-3655",
+        "email": "Lavonne.Mitchell@example.com"
+    },
+    {
+        "id": "2",
+        "username": "admin",
+        "password": "123",
+        "name": "Cordell",
+        "phone": "1-954-531-9357 x119",
+        "email": "Irma_Hagenes@gmail.com"
+    }
+]

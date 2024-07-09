@@ -1,0 +1,160 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "com.crave.Incident_Management",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		},
+		"dataSources": {
+			"incident": {
+				"uri": "model/Incident.json",
+				"type": "JSON"
+			},
+			"incident2": {
+				"uri": "model/incident.json",
+				"type": "JSON"
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "com.crave.Incident_Management.view.View1",
+			"type": "XML",
+			"async": true,
+			"id": "View1"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.crave.Incident_Management.i18n.i18n"
+				}
+			},
+			"incident_model": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "incident"
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "com.crave.Incident_Management.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [{
+					"name": "RouteView1",
+					"pattern": "RouteView1",
+					"target": [
+						"TargetView1"
+					]
+				}, {
+					"name": "Login_Screen",
+					"pattern": "",
+					"target": [
+						"Login_Screen"
+					]
+				}, {
+					"name": "Incident_List",
+					"pattern": "Incident_List/{username}",
+					"target": [
+						"Incident_List"
+					]
+				}, {
+					"name": "Create_User",
+					"pattern": "Create_User/{username}",
+					"target": [
+						"Create_User"
+					]
+				}, {
+					"name": "Incident_Detail",
+					"pattern": "Incident_Detail/{username}/{incidentPath}",
+					"target": [
+						"Incident_Detail"
+					]
+				}, {
+					"name": "Update_Detail",
+					"pattern": "Update_Detail/{username}/{incidentPath}",
+					"target": [
+						"Update_Detail"
+					]
+				}
+
+			],
+			"targets": {
+				"TargetView1": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "View1",
+					"viewName": "View1"
+				},
+				"Login_Screen": {
+					"viewType": "XML",
+					"viewName": "Login_Screen"
+				},
+				"Incident_List": {
+					"viewType": "XML",
+					"viewName": "Incident_List"
+				},
+				"Create_User": {
+					"viewType": "XML",
+					"viewName": "Create_User"
+				},
+				"Incident_Detail": {
+					"viewType": "XML",
+					"viewName": "Incident_Detail"
+				},
+				"Update_Detail": {
+					"viewType": "XML",
+					"viewName": "Update_Detail"
+				}
+			}
+		}
+	}
+}

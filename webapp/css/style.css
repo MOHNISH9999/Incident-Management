@@ -1,0 +1,186 @@
+.whiteBackground {
+    background-color: white;
+}
+
+.incident_detail_IncidentTite>span{
+	font-weight:bold;
+}
+.incident_detail_IncidentTite{
+	font-weight:bold;
+}
+
+
+.boldTitle>header>div>div>div>div>span{
+	font-weight:bold;
+	font-size: 20px;
+}
+.roundedCorners>div {
+    /*border-radius: 25px;*/
+    /*border-bottom-right-radius: 20px;*/
+    /*border-bottom-left-radius: 20px;*/
+    /*border-top-right-radius: 20px;*/
+    /*border-top-left-radius: 20px;*/
+    
+    border-radius:25px;
+}
+
+/*.centerTitle>div>div>div{*/
+/*	justify-content: center;*/
+/*}*/
+
+.centerTitle.sapMBarPH.sapMBarContainer {
+    /*text-align: center;*/
+    justify-content: center;
+}
+
+.createButton {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: darkorange;
+    width: 100%;
+    margin: auto;
+}
+
+.createButton>span {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: darkorange;
+    width: 100%;
+    margin: auto;
+}
+
+
+.createButton>span>span>bdi {
+  color: whitesmoke;
+   font-weight: bold;
+}
+.createButton>span>span {
+  color: whitesmoke;
+   font-weight: bold;
+}
+.createButtonandcancel>span>span {
+  color: whitesmoke;
+   font-weight: bold;
+}
+.createButtonandcancel {
+   background-color: darkorange;
+}
+
+.onlyBold>div>div>div>span>span{
+	font-weight: bold;
+}
+
+.onlyBold>div>div>div>div>div{
+	font-weight: bold;
+}
+
+.cameraStyle>span>span::before  {
+	color:darkorange;
+	font-weight: bold;
+	font-size:x-large;
+}
+.cameraStyle>span>span>bdi {
+	
+	font-weight: bold;
+}
+.incidentListFooter{
+	justify-content: center;
+	height: auto;
+}
+.createIncidentFooter{
+	justify-content: space-between;
+}
+
+.wideOrangeButton>span {
+    /*width: 100%;*/
+    /* Make the button as wide as the VBox */
+    background-color: darkorange;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    font-weight: bold;
+    
+    width:auto;
+    margin:auto;
+}
+.wideOrangeButton>span>span {
+    /*width:auto ;*/
+    /*width: auto !important;*/
+}
+
+.wideOrangeButton>span>span>bdi {
+    color: whitesmoke;
+    /*padding-left: 64px;*/
+    /*padding-right: 64px;*/
+    /*max-width: 500px;*/
+
+    margin: 64px;
+}
+.user_Logo>span>span{
+	font-size: x-large;
+	color:black;
+	font-weight: bold;
+}
+.update_OrangeButton{
+	background-color: darkorange;
+}
+
+.update_OrangeButton>span>span>bdi{
+color: whitesmoke;
+}
+
+
+/* CSS for enhancing the SAPUI5 Page */
+.vbox-padding {
+    padding: 20px;
+    /* Adds padding inside the VBox */
+}
+
+.loginFontSize>span>bdi {
+    font-size: x-large;
+}
+
+.enhanced-label {
+    font-size: 14px;
+    /* Adjusts font size for better readability */
+    margin-bottom: 10px;
+    /* Adds space below each label */
+}
+
+.combobox-padding,
+.input-padding {
+    margin-bottom: 15px;
+    /* Adds space below ComboBoxes and Inputs for better separation */
+}
+
+.toolbar-padding {
+    padding: 10px 0;
+    /* Adds vertical padding inside the Toolbar */
+}
+
+.button-padding {
+    margin-right: 10px;
+    /* Adds space to the right of Buttons for better spacing between them */
+}
+
+.refreshStyle>span>span::before{
+	color:black;
+	/*font-weight: bold;*/
+	font-size:large;
+}
+.vBox_createUser{
+	width:62%;
+	padding-left: 25px;
+}
+.vBox_incidentDetail{
+	padding-left: 20px;
+}
+
+.incident_detail_image{
+	width:50%;
+}

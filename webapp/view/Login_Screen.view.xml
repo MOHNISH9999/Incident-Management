@@ -1,0 +1,26 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="com.crave.Incident_Management.controller.Login_Screen">
+	<App>
+		<pages>
+			<Page id="titlePageid" titleAlignment="Center" class="whiteBackground" showHeader="false" showSubHeader="false">
+				<content>
+					<VBox justifyContent="Center" alignItems="Center" class="sapUiSmallMargin">
+						<!--<VBox >-->
+						<Image src="images/IncidentLogo2.png" width="100%" height="auto"/>
+						<Label text="LOGIN" width="100%" id="label0" class="sapUiMediumMarginBottom loginFontSize" textAlign="Center" design="Bold"/>
+						<VBox justifyContent="Center" alignItems="Center" class="sapUiSmallMargin sapUiResponsiveMargin" width="100%">
+							<VBox justifyContent="Center" alignItems="Center" width="auto" class="sapUiResponsiveMargin">
+								<Input id="usernameInput" placeholder="Username" value="{/username}" liveChange=".onInputChange" width="auto"
+									class="roundedCorners sapUiMediumMarginBottom "/>
+								<Input id="passwordInput" placeholder="Password" value="{/password}" liveChange=".onInputChange" type="Password" width="auto"
+									class="roundedCorners sapUiMediumMarginBottom "/>
+							</VBox>
+							<Button text="Login" press=".onLogin" class="wideOrangeButton  sapUiMediumMarginBottom"/>
+						</VBox>
+						<!--</VBox>-->
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
